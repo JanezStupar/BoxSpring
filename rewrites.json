@@ -1,0 +1,42 @@
+[
+    {
+        "to": "script/*",
+        "from": "script/*"
+    },
+   {		
+       "to": "_list/:listname/*",
+       "from": "list/:listname/*"
+   },
+   {
+        "from": "view/:viewname/*",
+        "to": "_view/:viewname/*"
+   },
+   {
+        "to" : "_show/:showname/*",
+        "from" : "show/:showname/*"
+   },   
+   {
+         "to" : "_update/:updatename/*",   
+         "from" : "update/:updatename/*"
+   },
+    {
+        "from" : "",
+        "to" : "_show/mainmenu"
+    },
+    {
+        "to": "style/*",
+        "from": "style/*"
+    },
+    {
+        "to": "vendor/*",
+        "from": "vendor/*"
+    },
+    {
+	"to": "../../*",
+	"from": ":db/*"
+    },
+    {
+        "to":"../..",
+        "from":":db"
+    }
+]

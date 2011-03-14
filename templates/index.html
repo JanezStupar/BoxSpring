@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoxSpring Syslog analitics app</title>
+    <link rel="stylesheet" href="/style/main.css" type="text/css">
+    <link rel="stylesheet" href="/style/jquery-ui-1.8.9.custom.css" type="text/css">   
+    <link rel="stylesheet" href="/style/ui.jqgrid.css" type="text/css">   
+  </head>
+  <body>
+  <div id="container">
+    <div id="account"></div>
+
+    <h1>BoxSpring</h1>
+
+    <div id="profile"></div>
+    <div id="items">
+        <div id="maingrid"></div>
+<div id="dialog-form" style="display: None" title="Log entry">
+        <label for="timestamp">Timestamp</label><br/>
+        <input type="text" name="timestamp" id="timestamp" class="text ui-widget-content
+ui-corner-all" /><br/>
+        <label for="priority">Priority</label><br/>
+        <input type="text" name="priority" id="priority" value="" class="text
+ui-widget-content ui-corner-all" /><br/>
+        <label for="hostname">Hostname</label><br/>
+        <input type="text" name="hostname" id="hostname" value=""
+class="text ui-widget-content ui-corner-all" /><br/>
+        <label for="tag">Tag</label><br/>
+        <input type="text" name="tag" id="tag" value=""
+class="text ui-widget-content ui-corner-all" /><br/>
+        <label for="content">Message</label><br/>
+        <textarea name="content" id="content" rows="10" cols="36"
+class="text ui-widget-content ui-corner-all"></textarea>
+</div>
+
+    </div>
+    <div id="sidebar">
+      <p>Please select the required data view.</p>
+    <div id="mainmenu">
+            <ul id="menulist" style="list-style-type: none;padding-left: 0;">
+            </ul>
+        </div>
+    </div>
+  </div>
+  </body>
+  <script src="/vendor/couchapp/loader.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $.couch.app(function(app) {
+      $("#account").evently("account", app);
+      $("#profile").evently("profile", app);
+      $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
+      $("#menulist").evently("mainmenu",app);      
+      $("#maingrid").evently("maingrid",app,"All");
+    },{db:"{{db}}",design: "{{design}}"});
+  </script>
+</html>

@@ -1,0 +1,5 @@
+{
+"a":
+{"click":"function(){$('#maingrid').trigger('drawGrid',$(this).attr('id'));}"}
+}
+
