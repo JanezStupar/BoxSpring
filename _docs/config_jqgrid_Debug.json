@@ -1,0 +1,32 @@
+{
+            "config_name": "Debug",
+            "config_type": "jqgrid",
+            "doc_type": "config",
+            "config_value": {
+                "colnames": ["Timestamp", "Priority", "Hostname", "Tag","Content"],
+                "colmodel": [{
+                    "name": "tstamp",
+                    "index": "tstamp",
+                    "width": 150
+                }, {
+                    "name": "pri",
+                    "width": 80,
+                    "sortable": false
+                }, {
+                    "name": "host",
+                    "width": 100,
+                    "sortable": false
+                }, {
+                    "name": "tag",
+                    "width": 100,
+                    "sortable": false
+                }, {
+                    "name": "content",
+                    "width": 400,
+                    "sortable": false
+                }],
+                "startkey": "[\"[debug]\"]",
+                "endkey": "[\"[debug]\",{}]",
+                "url": "/list/gridData/bypriority/"
+            }
+        }

@@ -1,0 +1,11 @@
+{
+            "doc_type": "config",
+            "config_type": "menuitem",
+            "config_name": "debug",
+            "config_value": {
+                "menuitemname": "Debug",
+                "menuitemtext": "Display debug",
+                "type": "grid",
+                "grid": "debug"
+            }
+        }

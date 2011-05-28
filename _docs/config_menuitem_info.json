@@ -1,0 +1,11 @@
+{
+            "doc_type": "config",
+            "config_type": "menuitem",
+            "config_name": "info",
+            "config_value": {
+                "menuitemname": "Info",
+                "menuitemtext": "Display Info",
+                "type": "grid",
+                "grid": "info"
+            }
+        }

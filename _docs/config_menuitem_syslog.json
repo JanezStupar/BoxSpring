@@ -1,0 +1,10 @@
+{
+            "doc_type": "config",
+            "config_type": "menuitem",
+            "config_name": "syslog",
+            "config_value": {
+                "menuitemname": "All",
+                "menuitemtext": "Display all",
+                "type": "grid"
+            }
+        }

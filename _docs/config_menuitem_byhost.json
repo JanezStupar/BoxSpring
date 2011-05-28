@@ -1,0 +1,11 @@
+{
+            "doc_type": "config",
+            "config_type": "menuitem",
+            "config_name": "byhost",
+            "config_value": {
+                "menuitemname": "Host",
+                "menuitemtext": "Display by Host",
+                "type": "grid",
+                "grid": "byhost"
+            }
+        }
